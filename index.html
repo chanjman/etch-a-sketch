@@ -3,36 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <title>Etch-a-Sketch</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="jquery-3.1.1.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./images/favicon.png">
     <link rel="stylesheet" href="reset.css">
 </head>
 <body>
-    <header id="header">
-        <img src="./images/etch-header.png" alt="Etch-a-Sketch">
-        <h1>Etch-a-Sketch</h1>
+    <header class="header">
+        <h1>Etch a Sketch</h1>
     </header>
     <div class="wrapper">
-        <div class="main-etch"></div>
+        <div class="main-etch">
+            <table>
+                <tr>
+                    <div class="tbldiv"></div>
+                </tr>
+                <tr>
+                    <div class="tbldiv"></div>
+                </tr>
+                <tr>
+                    <div class="tbldiv"></div>
+                </tr>
+                <tr>
+                    <div class="tbldiv"></div>
+                </tr>
+            </table>
+        </div>
         <div class="controls">
-            <header class="controls">
-                <h2>Controls</h2>
-            </header>
-            <section class="toggles">
-                <ul>
-                    <li id="num-boxes"></li>
-                    <li id="color-toggle"></li>
-                    <li id="opacity-toggle"></li>
-                    <li id="round-toggle"></li>
-                    <li id="eraser"></li>
-                    <li id="reset"></li>
-                </ul>
-            </section>
+            <ul>
+                <li>
+                    <div class="toggle one">
+                        <p>Brush size: <output name="amount" id="amount1" for="toggleoneinput">21</output></p>
+                        <div>
+                            <input type="range" id="toggleoneinput" name="points" value="21" min="12" max="30" oninput="amount1.value=toggleoneinput.value">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="toggle two">
+                        <p>Opacity: <output name="amount" id="amount2" for="toggletwoinput">50</output></p>
+                        <div>
+                            <input type="range" id="toggletwoinput" name="points" value="50" min="0" max="100" oninput="amount2.value=toggletwoinput.value">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="toggle three">
+                        <p>Roundness: <output name="amount" id="amount3" for="togglethreeinput">10</output></p>
+                        <div>
+                            <input type="range" name="points" id="togglethreeinput" value="10" min="0" max="20" oninput="amount3.value=togglethreeinput.value">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="toggle four">
+                        <p>Color</p>
+                        <div>
+                            <input type="color" id="togglefourinput" name="favcolor" value="#ff0000">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="toggle five">
+                        <div>
+                            <button name="button">Eraser</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="toggle six">
+                        <button name="button">Reset</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="toggle six">
+                        <button name="button">Rainbow</button>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
-    <script>type="text/javascript" src="script.js"</script>
+    <script src="script.js"></script>
 </body>
 </html>
