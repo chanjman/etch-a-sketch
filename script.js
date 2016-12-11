@@ -1,6 +1,4 @@
-opacity = $('#toggletwoinput').val();
-roundness = $('#togglethreeinput').val();
-
+//Get value from slider and set header font color
 
 $(function setColor() {
     $('#togglefourinput').on('change', function() {
@@ -11,3 +9,5 @@ $(function setColor() {
 });
 
 
+opacity = $('#toggletwoinput').val();
+roundness = $('#togglethreeinput').val();
