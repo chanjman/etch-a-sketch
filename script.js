@@ -1,4 +1,8 @@
-//Get value from .toggleone
+//Get value from .toggletwo
+
+function getRound() {
+   brushRound = $('#toggletwoinput').val();
+}
 //Get value from .togglethree
 
 
@@ -55,7 +59,9 @@ $(function addTable () {
 $(function () {
     $('.main-etch').on('mouseenter', '.tbldiv',function () {
         getColor();
+        getRound();
         $(this).css({'background-color': brushColor});
+        $(this).css({'border-radius': brushRound + 'px'})
     });
 });
 
