@@ -1,13 +1,11 @@
-//Get value from .toggletwo
+//+++++|| Get value from .toggletwo ||+++++++++++
 
 function getRound() {
    brushRound = $('#toggletwoinput').val();
 }
-//Get value from .togglethree
 
 
-
-//Get value from slider and set .heading back color
+//++++|| Get value from slider and set .heading back color ||++++
 
 $(function () {
     $('#togglethreeinput').on('change', function() {
@@ -16,7 +14,7 @@ $(function () {
     });
 });
 
-//Get value from slider and set .heading roundness
+//+++|| Get value from slider and set .heading roundness ||+++++++
 
 $(function () {
     $('#toggletwoinput').on('change', function () {
@@ -25,24 +23,26 @@ $(function () {
     });
 });
 
-//Get value from slider and set .tbldiv back color
+//++++|| Get value from slider and set .tbldiv background color ||+++
 
 function getColor() {
    brushColor = $('#togglethreeinput').val();
 }
 
-//Remove table
+//++++++++++|| Remove table ||+++++++++++++
 
 function removeTable () {
     $('.tbldiv').remove();
 }
+
+//++++++++|| Get div size ||+++++++++++++++
 
 function getDivSize () {
     tbldiv_size = (100 / brushSize + '%');
     return tbldiv_size;
 }
 
-//Get value from brush size slider and add table
+//++++|| Get value from brush size slider and add table ||+++++++++++
 
 $(function addTable () {
         $('#toggleoneinput').on('change', function () {
@@ -56,6 +56,8 @@ $(function addTable () {
         });
 });
 
+//+++++|| Set mouseenter to change color ||+++++++++++++++++
+
 $(function () {
     $('.main-etch').on('mouseenter', '.tbldiv',function () {
         getColor();
@@ -64,4 +66,14 @@ $(function () {
         $(this).css({'border-radius': brushRound + 'px'})
     });
 });
+
+//+++++++++++++++++|| Set Reset button ||++++++++++++++
+
+$(function () {
+    $('#reset').on('click', function() {
+        $('.tbldiv').css({'background-color': 'white'});
+    });
+});
+
+
 
