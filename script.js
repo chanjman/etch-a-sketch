@@ -4,6 +4,11 @@ function getRound() {
    brushRound = $('#toggletwoinput').val();
 }
 
+//+++++++++++++++++++++|| Get random rainbow color ||+++++++++++++++++
+function getRandomColor() {
+    return 'hsla(' + (Math.random() * 360) + ', 100%, 50%, 1)';
+}
+
 
 //++++|| Get value from slider and set .heading back color ||++++
 
@@ -128,7 +133,7 @@ $(function(){
 
 });
 
-//+++++++++++++++++++++|| Get random rainbow color ||+++++++++++++++++
+//+++++++++++++++++++++|| Get random rainbow color versions ||+++++++++++++++++
 
 /*function getRandomColor() {
     function c() {
@@ -147,7 +152,4 @@ $(function(){
     return color;
 }*/
 
-function getRandomColor() {
-    return 'hsla(' + (Math.random() * 360) + ', 100%, 50%, 1)';
-}
 
