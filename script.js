@@ -1,13 +1,17 @@
-//Get value from slider and set header font color
+//Get value from slider and set heading back color
 
-$(function setColor() {
+$(function () {
     $('#togglefourinput').on('change', function() {
-        brushColor = $('#togglefourinput').val();
-        colorHeader = {'color': brushColor};
-        $('h1').css(colorHeader);
+        var brushColor = $('#togglefourinput').val();
+        $('.heading').css({'background-color': brushColor})
     });
 });
 
+//Get value from slider and set heading roundness
 
-opacity = $('#toggletwoinput').val();
-roundness = $('#togglethreeinput').val();
+$(function () {
+    $('#togglethreeinput').on('change', function () {
+       var brushRound = $('#togglethreeinput').val();
+        $('.heading').css({'border-radius': brushRound + 'px'})
+    })
+});
