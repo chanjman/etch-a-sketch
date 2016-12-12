@@ -77,9 +77,9 @@ $(function () {
 
 //+++++++++++++++++|| Set Eraser button ||++++++++++++++
 
-var clicks = 0;
 
 $(function(){
+    var clicks = 0;
     $('#eraser').on('click', function() {
         clicks++;
         if (clicks % 2 !== 0) {
@@ -100,4 +100,51 @@ $(function(){
 
 });
 
+//+++++++++++++++++|| Set Rainbow button ||++++++++++++++
+
+
+$(function(){
+    var clicks = 0;
+    $('#rainbow').on('click', function() {
+        clicks++;
+        if (clicks % 2 !== 0) {
+            $('#rainbow').text("Click for OFF");
+            $('.main-etch').on('mouseenter', '.tbldiv', function () {
+                $(this).css({'background-color': getRandomColor});
+            });
+        } else {
+            $('#rainbow').text("Rainbow");
+            $('.main-etch').on('mouseenter', '.tbldiv',function () {
+                getColor();
+                getRound();
+                $(this).css({'background-color': brushColor});
+                $(this).css({'border-radius': brushRound + '%'})
+            });
+        }
+    });
+
+});
+
+//+++++++++++++++++++++|| Get random rainbow color ||+++++++++++++++++
+
+/*function getRandomColor() {
+    function c() {
+        var hex = Math.floor(Math.random()*256).toString(16);
+        return ("0"+String(hex)).substr(-2); // pad with zero
+    }
+    return "#"+c()+c()+c();
+}*/
+
+/*function getRandomColor() {
+    var letters = 'ABC1234'.split('');
+    var color = '#';
+    for (var i=0; i<3; i++ ) {
+        color += letters[Math.floor(Math.random() * letters.length)];
+    }
+    return color;
+}*/
+
+function getRandomColor() {
+    return 'hsla(' + (Math.random() * 360) + ', 100%, 50%, 1)';
+}
 
