@@ -4,6 +4,12 @@ function getRound() {
    brushRound = $('#toggletwoinput').val();
 }
 
+//+++++|| Get value from .toggletwo ||+++++++++++
+
+function getOpacity () {
+    brushOp = ($('#togglethreeinput').val())/100;
+}
+
 //+++++++++++++++++++++|| Get random rainbow color ||+++++++++++++++++
 function getRandomColor() {
     return 'hsla(' + (Math.random() * 360) + ', 100%, 50%, 1)';
@@ -13,8 +19,8 @@ function getRandomColor() {
 //++++|| Get value from slider and set .heading back color ||++++
 
 $(function () {
-    $('#togglethreeinput').on('change', function() {
-        var brushColor = $('#togglethreeinput').val();
+    $('#togglefourinput').on('change', function() {
+        var brushColor = $('#togglefourinput').val();
         $('.heading').css({'background-color': brushColor})
     });
 });
@@ -28,10 +34,20 @@ $(function () {
     });
 });
 
-//++++|| Get value from slider and set .tbldiv background color ||+++
+//+++|| Get value from slider and set .heading opacity ||+++++++
+
+$(function () {
+    $('#togglethreeinput').on('change', function () {
+        var brushOpacity = $('#togglethreeinput').val();
+        brushOpacity /= 100;
+        $('.heading').css({'opacity': brushOpacity})
+    });
+});
+
+//++++|| Get value from color slider||+++
 
 function getColor() {
-   brushColor = $('#togglethreeinput').val();
+   brushColor = $('#togglefourinput').val();
 }
 
 //++++++++++|| Remove table ||+++++++++++++
@@ -67,8 +83,10 @@ $(function changeColor () {
     $('.main-etch').on('mouseenter', '.tbldiv',function () {
         getColor();
         getRound();
+        getOpacity();
         $(this).css({'background-color': brushColor});
-        $(this).css({'border-radius': brushRound + '%'})
+        $(this).css({'border-radius': brushRound + '%'});
+        $(this).css({'opacity': brushOp });
     });
 });
 
