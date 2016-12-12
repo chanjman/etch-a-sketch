@@ -23,12 +23,9 @@ $(function () {
 
 //Get value from slider and set .tbldiv back color
 
-$(function () {
-    $('#togglethreeinput').on('change', function() {
-        var brushColor = $('#togglethreeinput').val();
-        $('.tbldiv').css({'background-color': brushColor})
-    });
-});
+function getColor() {
+   brushColor = $('#togglethreeinput').val();
+}
 
 //Remove table
 
@@ -54,3 +51,11 @@ $(function addTable () {
             }
         });
 });
+
+$(function () {
+    $('.main-etch').on('mouseenter', '.tbldiv',function () {
+        getColor();
+        $(this).css({'background-color': brushColor});
+    });
+});
+
