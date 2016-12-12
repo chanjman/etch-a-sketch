@@ -23,7 +23,7 @@
         <div class="controls">
             <ul>
                 <li>
-                    <div class="toggle one">
+                    <div class="toggle">
                         <p>Canvas density: <output name="amount" id="amount1" for="toggleoneinput">0</output></p>
                         <div>
                             <input type="range" id="toggleoneinput" name="points" value="0" min="0" max="35" oninput="amount1.value=toggleoneinput.value">
@@ -31,7 +31,7 @@
                     </div>
                 </li>
                 <li>
-                    <div class="toggle two">
+                    <div class="toggle">
                         <p>Roundness: <output name="amount" id="amount2" for="toggletwoinput">0</output></p>
                         <div>
                             <input type="range" name="points" id="toggletwoinput" value="0" min="0" max="50" oninput="amount2.value=toggletwoinput.value">
@@ -39,27 +39,35 @@
                     </div>
                 </li>
                 <li>
-                    <div class="toggle three">
-                        <p>Color</p>
+                    <div class="toggle">
+                        <p>Opacity: <output name="amount" id="amount3" for="togglethreeinput">100</output></p>
                         <div>
-                            <input type="color" id="togglethreeinput" name="favcolor" value="#3adfde">
+                            <input type="range" name="points" id="togglethreeinput" value="100" min="0" max="100" step="1" oninput="amount3.value=togglethreeinput.value">
                         </div>
                     </div>
                 </li>
                 <li>
-                    <div class="toggle four">
+                    <div class="toggle">
+                        <p>Color</p>
+                        <div>
+                            <input type="color" id="togglefourinput" name="favcolor" value="#3adfde">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="toggle">
                         <div>
                             <button name="button" id="eraser">Eraser</button>
                         </div>
                     </div>
                 </li>
                 <li>
-                    <div class="toggle five">
+                    <div class="toggle">
                         <button name="button" id="reset">Clear</button>
                     </div>
                 </li>
                 <li>
-                    <div class="toggle six">
+                    <div class="toggle">
                         <button name="button" id="rainbow">Rainbow</button>
                     </div>
                 </li>
