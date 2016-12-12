@@ -71,7 +71,10 @@ $(function changeColor () {
 
 $(function () {
     $('#reset').on('click', function() {
-        $('.tbldiv').css({'background-color': 'white'});
+        var warn = confirm("Are you sure you want to clear?")
+        if (warn == true) {
+            $('.tbldiv').css({'background-color': 'white'});
+        }
     });
 });
 
