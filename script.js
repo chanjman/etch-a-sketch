@@ -63,7 +63,7 @@ $(function changeColor () {
         getColor();
         getRound();
         $(this).css({'background-color': brushColor});
-        $(this).css({'border-radius': brushRound + 'px'})
+        $(this).css({'border-radius': brushRound + '%'})
     });
 });
 
@@ -93,7 +93,7 @@ $(function(){
                     getColor();
                     getRound();
                     $(this).css({'background-color': brushColor});
-                    $(this).css({'border-radius': brushRound + 'px'})
+                    $(this).css({'border-radius': brushRound + '%'})
             });
         }
     });
