@@ -58,7 +58,7 @@ $(function addTable () {
 
 //+++++|| Set mouseenter to change color ||+++++++++++++++++
 
-$(function () {
+$(function changeColor () {
     $('.main-etch').on('mouseenter', '.tbldiv',function () {
         getColor();
         getRound();
@@ -75,5 +75,29 @@ $(function () {
     });
 });
 
+//+++++++++++++++++|| Set Eraser button ||++++++++++++++
+
+var clicks = 0;
+
+$(function(){
+    $('#eraser').on('click', function() {
+        clicks++;
+        if (clicks % 2 !== 0) {
+            $('#eraser').text("Click for OFF");
+            $('.main-etch').on('mouseenter', '.tbldiv', function () {
+                $(this).css({'background-color': 'white'});
+            });
+        } else {
+            $('#eraser').text("Eraser");
+            $('.main-etch').on('mouseenter', '.tbldiv',function () {
+                    getColor();
+                    getRound();
+                    $(this).css({'background-color': brushColor});
+                    $(this).css({'border-radius': brushRound + 'px'})
+            });
+        }
+    });
+
+});
 
 
