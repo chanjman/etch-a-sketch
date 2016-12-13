@@ -1,3 +1,17 @@
+//+++++++++++++|| Get background color ||++++++++++++++++++++
+
+function getBackColor () {
+	if (eraserClicks % 2 !== 0) {
+		return 'white';
+	} else {
+    	if (rainbowClicks % 2 === 0) {
+        	return $('#slider4').val();
+    	} else {
+        	return 'hsla(' + (Math.random() * 360) + ', 100%, 50%, 1)';
+    	}
+	}
+}
+
 //+++++++++++++|| Set canvas ||++++++++++++++++++++
 
 function setCanvas () {
@@ -8,29 +22,29 @@ function setCanvas () {
         var canvasSizePct = (100 / canvasSize + '%');
         $('.tbldiv').css({'width': canvasSizePct, 'height': canvasSizePct});
 	}
-};
+}
 
 //+++++++++++++|| Set brush roundness ||++++++++++++++++++++
 
 function setRound () {
 	var brushRound = $('#slider2').val();
 	$('.heading').css({'border-radius': brushRound + "%"});
-};
+}
 
 //+++++++++++++|| Set opacity ||++++++++++++++++++++
 
 function setOpacity () {
 	var brushOpacity = ($('#slider3').val() / 100);
 	$('.heading').css({'opacity': brushOpacity});
-};
+}
 
 //+++++++++++++|| Set color ||++++++++++++++++++++
 
 function setColor () {
-	var brushColor = $('#slider4').val();
-	$('.heading').css({'background-color': brushColor});
+	var backColor = $('#slider4').val();
+	$('.heading').css({'background-color': getBackColor});
 
-};
+}
 
 //+++++++++++++|| Set mouseenter event||++++++++++++++++++++
 
@@ -40,10 +54,10 @@ $(function () {
 			$(this).css({'border-radius': brushRound + "%"});
 		var brushOpacity = ($('#slider3').val() / 100);
 			$(this).css({'opacity': brushOpacity});
-			var brushColor = $('#slider4').val();
-			$(this).css({'background-color': brushColor});
+		var backColor = $('#slider4').val();	
+			$(this).css({'background-color': getBackColor});
 	})
-});
+})
 
 
 //+++++++++++++++++|| Set Reset button ||++++++++++++++
@@ -57,11 +71,29 @@ $(function () {
     })
 });
 
-/*+++++++++++++++++|| Rainbow click ||++++++++++++++
-var clicks = 0;
+//+++++++++++++++++|| Rainbow click ||++++++++++++++
+
+var rainbowClicks = 0;
 
 function rainbowClick () {
-	clicks++
-};*/
+    rainbowClicks++;
+    if(rainbowClicks % 2 !== 0) {
+    	$('#rainbow').text("Rainbow ON");
+    } else {
+    	$('#rainbow').text("Rainbow OFF");
+    }
+}
+
+//+++++++++++++++++|| Eraser click ||++++++++++++++
+var eraserClicks = 0;
+
+function eraserClick () {
+	eraserClicks++;
+	if(eraserClicks % 2 !== 0) {
+    	$('#eraser').text("Eraser ON");
+    } else {
+    	$('#eraser').text("Eraser OFF");
+    }
+}
 
 
