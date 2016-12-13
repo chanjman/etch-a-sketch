@@ -41,7 +41,6 @@ function setOpacity () {
 //+++++++++++++|| Set header image color ||++++++++++++++++++++
 
 function setColor () {
-	var backColor = $('#slider4').val();
 	$('.heading').css({'background-color': getBackColor});
 
 }
@@ -53,8 +52,7 @@ $(function () {
 		var brushRound = $('#slider2').val();
 			$(this).css({'border-radius': brushRound + "%"});
 		var brushOpacity = ($('#slider3').val() / 100);
-			$(this).css({'opacity': brushOpacity});
-		var backColor = $('#slider4').val();	
+			$(this).css({'opacity': brushOpacity});	
 			$(this).css({'background-color': getBackColor});
 	})
 })
