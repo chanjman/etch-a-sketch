@@ -27,6 +27,8 @@ You can check it out [here](https://chanjman.github.io/etch-a-sketch/). Check it
 
 ###### Sneak peek
 
+![How it works](https://github.com/chanjman/etch-a-sketch/blob/master/images/ebFS5E7qBH.gif) 
+
 ![Tabula rasa](https://github.com/chanjman/etch-a-sketch/blob/master/images/screenshot-clean.png)
 
 ![Smiley face](https://github.com/chanjman/etch-a-sketch/blob/master/images/screenshot-smiley.png)
