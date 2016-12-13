@@ -2,7 +2,7 @@
 
 This project is part of the TOP's (The Odin Project) curicculum of learning by doing.
 
-#### Written in HTML, CSS, and Javascript/jQuery
+##### Written in HTML, CSS, and Javascript/jQuery
 
 You can check it out [here](https://chanjman.github.io/etch-a-sketch/). Check it out, sketch something cool and have fun!
 
