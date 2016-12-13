@@ -1,4 +1,4 @@
-## Etch-a-Sketc
+## Etch-a-Sketch
 
 This project is part of the TOP's (The Odin Project) curicculum of learning by doing.
 
