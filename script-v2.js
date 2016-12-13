@@ -22,7 +22,6 @@ function setRound () {
 function setOpacity () {
 	var brushOpacity = ($('#slider3').val() / 100);
 	$('.heading').css({'opacity': brushOpacity});
-
 };
 
 //+++++++++++++|| Set color ||++++++++++++++++++++
@@ -38,11 +37,11 @@ function setColor () {
 $(function () {
 	$('.main-etch').on('mouseenter', '.tbldiv', function() {
 		var brushRound = $('#slider2').val();
-		$(this).css({'border-radius': brushRound + "%"});
+			$(this).css({'border-radius': brushRound + "%"});
 		var brushOpacity = ($('#slider3').val() / 100);
-		$(this).css({'opacity': brushOpacity});
-		var brushColor = $('#slider4').val();
-		$(this).css({'background-color': brushColor});
+			$(this).css({'opacity': brushOpacity});
+			var brushColor = $('#slider4').val();
+			$(this).css({'background-color': brushColor});
 	})
 });
 
@@ -57,3 +56,12 @@ $(function () {
         }
     })
 });
+
+/*+++++++++++++++++|| Rainbow click ||++++++++++++++
+var clicks = 0;
+
+function rainbowClick () {
+	clicks++
+};*/
+
+
