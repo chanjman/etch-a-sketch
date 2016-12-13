@@ -24,21 +24,21 @@ function setCanvas () {
 	}
 }
 
-//+++++++++++++|| Set brush roundness ||++++++++++++++++++++
+//+++++++++++++|| Set header image brush roundness ||++++++++++++++++++++
 
 function setRound () {
 	var brushRound = $('#slider2').val();
 	$('.heading').css({'border-radius': brushRound + "%"});
 }
 
-//+++++++++++++|| Set opacity ||++++++++++++++++++++
+//+++++++++++++|| Set header image opacity ||++++++++++++++++++++
 
 function setOpacity () {
 	var brushOpacity = ($('#slider3').val() / 100);
 	$('.heading').css({'opacity': brushOpacity});
 }
 
-//+++++++++++++|| Set color ||++++++++++++++++++++
+//+++++++++++++|| Set header image color ||++++++++++++++++++++
 
 function setColor () {
 	var backColor = $('#slider4').val();
