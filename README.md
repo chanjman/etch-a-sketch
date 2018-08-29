@@ -4,7 +4,7 @@ This project is part of the TOP's (The Odin Project) curicculum of learning by d
 
 ##### Written in HTML, CSS, and Javascript/jQuery
 
-You can check it out [here](https://chanjman.github.io/etch-a-sketch/). Check it out, sketch something cool and have fun!
+You can check it out [here](https://mariozugaj.github.io/etch-a-sketch/). Check it out, sketch something cool and have fun!
 
 
 ### Features
